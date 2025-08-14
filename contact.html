@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Dad's Equipment & Trucks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script defer src="./config.js"></script>
+    <script defer src="./assets/app.js"></script>
+  </head>
+  <body class="font-[Inter] bg-gray-50 text-gray-900">
+    <header id="site-header"></header>
+
+    <main class="max-w-3xl mx-auto px-6 py-12">
+      <h1 class="page-title">Contact Us</h1>
+      <p class="text-gray-600">Have a question about a listing? Send a message and we'll get back to you.</p>
+
+      <form id="contactForm" class="mt-8 space-y-4" onsubmit="return handleContactSubmit(event)">
+        <div>
+          <label class="label" for="name">Name</label>
+          <input id="name" name="name" class="input w-full" />
+        </div>
+        <div>
+          <label class="label" for="email">Email</label>
+          <input id="email" name="email" type="email" class="input w-full" />
+        </div>
+        <div>
+          <label class="label" for="subject">Subject</label>
+          <input id="subject" name="subject" class="input w-full" />
+        </div>
+        <div>
+          <label class="label" for="message">Message</label>
+          <textarea id="message" name="message" rows="6" class="input w-full"></textarea>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="btn-primary" type="submit">Send Email</button>
+          <p class="text-sm text-gray-500">This opens your email client. Set <code>CONTACT_EMAIL</code> in <code>config.js</code>.</p>
+        </div>
+      </form>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script>
+      function handleContactSubmit(e) {
+        e.preventDefault();
+        const email = (window.SITE_CONFIG && window.SITE_CONFIG.CONTACT_EMAIL) || '';
+        const name = document.getElementById('name').value || '';
+        const from = document.getElementById('email').value || '';
+        const subject = document.getElementById('subject').value || 'Equipment inquiry';
+        const message = document.getElementById('message').value || '';
+        if (!email) {
+          alert('CONTACT_EMAIL is not set in config.js');
+          return false;
+        }
+        const body = encodeURIComponent(`From: ${name} (${from})\n\n${message}`);
+        const href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${body}`;
+        window.location.href = href;
+        return false;
+      }
+    </script>
+  </body>
+</html>
