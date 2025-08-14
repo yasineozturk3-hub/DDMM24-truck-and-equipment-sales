@@ -1,0 +1,36 @@
+[
+  {
+    "type": "truck",
+    "year": 2018,
+    "make": "Ford",
+    "model": "F-350",
+    "vin": "1FT8W3DT0JEC00001",
+    "condition": "Used - Good",
+    "miles": 124500,
+    "description": "Crew cab, diesel. Serviced regularly.",
+    "images": [
+      "https://placehold.co/1200x800?text=F-350+1",
+      "https://placehold.co/1200x800?text=F-350+2"
+    ]
+  },
+  {
+    "type": "equipment",
+    "year": 2015,
+    "make": "Caterpillar",
+    "model": "320E",
+    "vin": "CAT0320EABC123456",
+    "condition": "Used - Fair",
+    "miles": null,
+    "description": "Excavator with quick coupler. Ready to work.",
+    "images": [
+      "https://placehold.co/1200x800?text=CAT+320E"
+    ]
+  },
+  {
+    "type": "truck",
+    "year": 2020,
+    "make": "Kenworth",
+    "model": "T680",
+    "description": "Sleeper cab, excellent condition."
+  }
+]
