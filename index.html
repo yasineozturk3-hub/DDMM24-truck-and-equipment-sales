@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dad's Equipment & Trucks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script defer src="./assets/app.js"></script>
+    <script defer src="./config.js"></script>
+  </head>
+  <body class="font-[Inter] bg-gray-50 text-gray-900">
+    <header id="site-header"></header>
+
+    <main>
+      <section class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 py-24 lg:py-28 flex flex-col lg:flex-row items-center gap-12">
+          <div class="flex-1">
+            <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight">Heavy Equipment & Trucks</h1>
+            <p class="mt-4 text-lg text-gray-600">Browse our current inventory of used trucks and equipment. Clean, simple, straight to the point.</p>
+            <div class="mt-8 flex gap-4">
+              <a href="./inventory.html" class="btn-primary">View Inventory</a>
+              <a href="./contact.html" class="btn-secondary">Contact Us</a>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="rounded-2xl shadow-xl overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1601412436009-d964bd02edbc?q=80&w=1600&auto=format&fit=crop" alt="Equipment" class="w-full h-[320px] object-cover"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white border-t">
+        <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card">
+            <h3 class="card-title">Straightforward Listings</h3>
+            <p class="card-text">Year, make, model, VIN, condition, miles, description, and multiple images—only what you provide is shown.</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Mobile Friendly</h3>
+            <p class="card-text">Optimized for phones and desktops with a clean, professional look.</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Easy Updates</h3>
+            <p class="card-text">Use the Admin app to add or remove listings. No fields are required.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+  </body>
+</html>
